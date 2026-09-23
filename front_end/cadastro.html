@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petshop - Cadastre seu animal</title>
+  <!-- Importando o mesmo CSS unificado do login -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-header">
+      <h1>🐾 Cadastre seu animal</h1>
+      <p>Preencha os dados do pet para o registro</p>
+    </div>
+
+    <!-- Div para alertas/erros gerenciada pelo JavaScript -->
+    <div id="alertBox" class="alert-danger d-none"></div>
+
+    <form id="cadastroAnimalForm">
+      
+      <!-- Campo Raça -->
+      <div class="form-group">
+        <label for="raca">Raça</label>
+        <input type="text" id="raca" placeholder="Ex: Golden Retriever, SRD" required>
+      </div>
+
+      <!-- Campo Idade -->
+      <div class="form-group">
+        <label for="idade">Idade (em anos)</label>
+        <input type="number" id="idade" min="0" max="30" placeholder="Ex: 3" required>
+      </div>
+
+      <!-- Campo Porte -->
+      <div class="form-group">
+        <label for="porte">Porte do seu animal</label>
+        <select id="porte" required>
+          <option value="" disabled selected>Selecione o porte</option>
+          <option value="Pequeno">Pequeno</option>
+          <option value="Médio">Médio</option>
+          <option value="Grande">Grande</option>
+        </select>
+      </div>
+
+      <!-- Campo Gênero -->
+      <div class="form-group">
+        <label for="genero">Gênero do seu Animal</label>
+        <select id="genero" required>
+          <option value="" disabled selected>Selecione o gênero</option>
+          <option value="Macho">Macho</option>
+          <option value="Fêmea">Fêmea</option>
+        </select>
+      </div>
+
+      <!-- Botão de Envio -->
+      <button type="submit" class="btn-submit">Cadastrar</button>
+    </form>
+
+    <div class="login-footer">
+      <a href="index.html">⬅️ Voltar para o Login</a>
+    </div>
+  </div>
+
+  <!-- Importando o arquivo JS específico do cadastro -->
+  <script src="cadastro.js"></script>
+</body>
+</html>
